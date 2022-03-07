@@ -1,0 +1,19 @@
+version: '3.4'
+
+services:
+  cuda_cross:
+    build:
+      context: .
+      dockerfile: aarch64-cuda-10-2-ubuntu18.dockerfile
+    privileged: true
+    container_name: cuda_cross_container
+    tty: true
+  opencv_builder:
+    build:
+      context: .
+      dockerfile: build-opencv-cuda.dockerfile
+    privileged: true
+    container_name: opencv_builder_container
+    depends_on:
+    - cuda_cross
+    tty: true

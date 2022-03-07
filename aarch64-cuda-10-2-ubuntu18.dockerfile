@@ -41,23 +41,23 @@ RUN git clone --recursive -b v0.3.12 https://github.com/xianyi/OpenBLAS.git && \
 # Dependencies require cuda-toolkit-10.2 which isn't installed in nvidia docker container
 # It contains cuda-compat instead. However deb files currently depend on cuda-toolkit alone.
 # Hence force dpkg configure
-RUN wget https://repo.download.nvidia.com/jetson/x86_64/pool/r32.4/c/cuda/cuda-cross-aarch64-10-2_10.2.89-1_all.deb && \
-    wget https://repo.download.nvidia.com/jetson/x86_64/pool/r32.4/c/cuda/cuda-cross-aarch64_10.2.89-1_all.deb && \
-    wget https://repo.download.nvidia.com/jetson/x86_64/pool/r32.4/c/cuda/cuda-cudart-cross-aarch64-10-2_10.2.89-1_all.deb && \
-    wget https://repo.download.nvidia.com/jetson/x86_64/pool/r32.4/c/cuda/cuda-cufft-cross-aarch64-10-2_10.2.89-1_all.deb && \
-    wget https://repo.download.nvidia.com/jetson/x86_64/pool/r32.4/c/cuda/cuda-cupti-cross-aarch64-10-2_10.2.89-1_all.deb && \
-    wget https://repo.download.nvidia.com/jetson/x86_64/pool/r32.4/c/cuda/cuda-curand-cross-aarch64-10-2_10.2.89-1_all.deb && \
-    wget https://repo.download.nvidia.com/jetson/x86_64/pool/r32.4/c/cuda/cuda-cusolver-cross-aarch64-10-2_10.2.89-1_all.deb && \
-    wget https://repo.download.nvidia.com/jetson/x86_64/pool/r32.4/c/cuda/cuda-cusparse-cross-aarch64-10-2_10.2.89-1_all.deb && \
-    wget https://repo.download.nvidia.com/jetson/x86_64/pool/r32.4/c/cuda/cuda-driver-cross-aarch64-10-2_10.2.89-1_all.deb && \
-    wget https://repo.download.nvidia.com/jetson/x86_64/pool/r32.4/c/cuda/cuda-misc-headers-cross-aarch64-10-2_10.2.89-1_all.deb && \
-    wget https://repo.download.nvidia.com/jetson/x86_64/pool/r32.4/c/cuda/cuda-npp-cross-aarch64-10-2_10.2.89-1_all.deb && \
-    wget https://repo.download.nvidia.com/jetson/x86_64/pool/r32.4/c/cuda/cuda-nsight-compute-addon-l4t-10-2_10.2.89-1_all.deb && \
-    wget https://repo.download.nvidia.com/jetson/x86_64/pool/r32.4/c/cuda/cuda-nvgraph-cross-aarch64-10-2_10.2.89-1_all.deb && \
-    wget https://repo.download.nvidia.com/jetson/x86_64/pool/r32.4/c/cuda/cuda-nvml-cross-aarch64-10-2_10.2.89-1_all.deb && \
-    wget https://repo.download.nvidia.com/jetson/x86_64/pool/r32.4/c/cuda/cuda-nvrtc-cross-aarch64-10-2_10.2.89-1_all.deb && \
-    wget https://repo.download.nvidia.com/jetson/x86_64/pool/r32.4/c/cublas/libcublas-cross-aarch64_10.2.2.89-1_all.deb && \
-    wget https://repo.download.nvidia.com/jetson/x86_64/pool/r32.4/n/nsight-compute/nsight-compute-addon-l4t-2019.5.0_2019.5.0.14-1_all.deb && \
+RUN wget https://repo.download.nvidia.com/jetson/x86_64/pool/r32.5/c/cuda/cuda-cross-aarch64-10-2_10.2.89-1_all.deb && \
+    wget https://repo.download.nvidia.com/jetson/x86_64/pool/r32.5/c/cuda/cuda-cross-aarch64_10.2.89-1_all.deb && \
+    wget https://repo.download.nvidia.com/jetson/x86_64/pool/r32.5/c/cuda/cuda-cudart-cross-aarch64-10-2_10.2.89-1_all.deb && \
+    wget https://repo.download.nvidia.com/jetson/x86_64/pool/r32.5/c/cuda/cuda-cufft-cross-aarch64-10-2_10.2.89-1_all.deb && \
+    wget https://repo.download.nvidia.com/jetson/x86_64/pool/r32.5/c/cuda/cuda-cupti-cross-aarch64-10-2_10.2.89-1_all.deb && \
+    wget https://repo.download.nvidia.com/jetson/x86_64/pool/r32.5/c/cuda/cuda-curand-cross-aarch64-10-2_10.2.89-1_all.deb && \
+    wget https://repo.download.nvidia.com/jetson/x86_64/pool/r32.5/c/cuda/cuda-cusolver-cross-aarch64-10-2_10.2.89-1_all.deb && \
+    wget https://repo.download.nvidia.com/jetson/x86_64/pool/r32.5/c/cuda/cuda-cusparse-cross-aarch64-10-2_10.2.89-1_all.deb && \
+    wget https://repo.download.nvidia.com/jetson/x86_64/pool/r32.5/c/cuda/cuda-driver-cross-aarch64-10-2_10.2.89-1_all.deb && \
+    wget https://repo.download.nvidia.com/jetson/x86_64/pool/r32.5/c/cuda/cuda-misc-headers-cross-aarch64-10-2_10.2.89-1_all.deb && \
+    wget https://repo.download.nvidia.com/jetson/x86_64/pool/r32.5/c/cuda/cuda-npp-cross-aarch64-10-2_10.2.89-1_all.deb && \
+    wget https://repo.download.nvidia.com/jetson/x86_64/pool/r32.5/c/cuda/cuda-nsight-compute-addon-l4t-10-2_10.2.89-1_all.deb && \
+    wget https://repo.download.nvidia.com/jetson/x86_64/pool/r32.5/c/cuda/cuda-nvgraph-cross-aarch64-10-2_10.2.89-1_all.deb && \
+    wget https://repo.download.nvidia.com/jetson/x86_64/pool/r32.5/c/cuda/cuda-nvml-cross-aarch64-10-2_10.2.89-1_all.deb && \
+    wget https://repo.download.nvidia.com/jetson/x86_64/pool/r32.5/c/cuda/cuda-nvrtc-cross-aarch64-10-2_10.2.89-1_all.deb && \
+    wget https://repo.download.nvidia.com/jetson/x86_64/pool/r32.5/c/cublas/libcublas-cross-aarch64_10.2.2.89-1_all.deb && \
+    wget https://repo.download.nvidia.com/jetson/x86_64/pool/r32.5/n/nsight-compute/nsight-compute-addon-l4t-2019.5.0_2019.5.0.14-1_all.deb && \
     dpkg -i --force-all  *.deb && \
     rm *.deb && \
     apt-get update && \
